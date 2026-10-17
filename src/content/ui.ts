@@ -77,6 +77,10 @@ export const T = {
     settings: t('Settings', 'Settings'),
     redoSetup: t('Ulitin ang setup', 'Redo setup'),
     notResponding: t('Hindi siya sumasagot ngayon', "They aren't responding right now"),
+    iosInstall: t(
+      'Sa iPhone: pindutin ang Share (⬆) → "Add to Home Screen", tapos doon ito buksan. Kung hindi, baka burahin ng iPhone ang setup at mga nasabi niya pagkalipas ng ilang araw.',
+      'On iPhone: tap Share (⬆) → "Add to Home Screen", then open it from there. Otherwise the iPhone may delete the setup and history after a few days.',
+    ),
     unreliable: t(
       'Hindi pa sigurado ang OO/HINDI niya. Ulitin ang check bago umasa sa mga sagot.',
       "Their yes/no isn't reliable yet. Redo the check before relying on answers.",

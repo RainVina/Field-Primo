@@ -5,6 +5,15 @@ import { callNameOf, recommendedMode, reliability, type Mode } from '../lib/prof
 import { modeScreen, useNav } from '../nav';
 import { useApp, useLang } from '../state';
 
+/*
+ * Safari on iPhone deletes a website's saved data after about 7 days without a
+ * visit, unless the site was added to the Home Screen.
+ */
+const needsIosInstall =
+  (/iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) &&
+  !(navigator as { standalone?: boolean }).standalone &&
+  !matchMedia('(display-mode: standalone)').matches;
+
 export function Home() {
   const { profile, setSettings } = useApp();
   const { tr, lang } = useLang();
@@ -25,6 +34,7 @@ export function Home() {
     return (
       <Page noHeader>
         {langToggle}
+        {needsIosInstall && <p class="note">{tr(T.home.iosInstall)}</p>}
         <h1 class="app-title">{tr(T.appName)}</h1>
         <p class="lead">{tr(T.welcome.tagline)}</p>
         <p>{tr(T.welcome.body)}</p>
@@ -50,6 +60,7 @@ export function Home() {
   return (
     <Page noHeader>
       {langToggle}
+      {needsIosInstall && <p class="note">{tr(T.home.iosInstall)}</p>}
       <h1 class="app-title">{fill(T.home.forPatient, lang, { call: callNameOf(profile, lang) })}</h1>
       <SignalReminder />
       {reliability(profile.verifyScore) === 'unreliable' && <p class="warn">{tr(T.home.unreliable)}</p>}
