@@ -10,7 +10,10 @@ nurse and a speech-language pathologist. Do not use with patients yet.
 
 ## What it does
 
-- **Setup, one step at a time.** Walks a relative through finding the patient's
+- **Usable immediately.** The first screen shows the ways to talk; nothing has
+  to be set up first. Until setup is done, screens suggest a signal to agree on
+  ("squeeze once for yes, twice for no").
+- **Optional setup, one step at a time.** Walks a relative through finding the patient's
   most reliable YES signal (squeeze, finger, thumbs up, blink, look up, nod, or
   something else), choosing a NO signal, checking that yes/no is reliable with
   questions whose answers are known, checking whether the patient can read the
@@ -26,11 +29,11 @@ nurse and a speech-language pathologist. Do not use with patients yet.
   sabihin?"), shown huge, and spoken aloud. Urgent ones show *TAWAGIN ANG NURSE
   NGAYON*. Some come with a suggestion for the relative (for "Anong araw ngayon?"
   it shows today's date).
-- **Start of each visit**: a quick hello that re-checks the signal, then gives the
+- **Start of each visit** (after setup): a quick hello that re-checks the signal, then gives the
   patient the first word: "May gusto ka bang sabihin?"
 - **History** of everything said, with times and whether the patient confirmed it.
   Never deleted automatically.
-- **Bedside card** for the nurse, in Filipino and English, with the patient's
+- **Bedside card** for the nurse (after setup), in Filipino and English, with the patient's
   yes/no signals and preferences.
 - **Honest "can't respond right now" path** with things the family can still do.
 - **Family guide**: arriving, how to talk, when to call the nurse, delirium,

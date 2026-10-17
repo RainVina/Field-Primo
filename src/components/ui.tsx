@@ -63,8 +63,9 @@ export function AnswerButtons(props: { onYes: () => void; onNo: () => void; onUn
 /** "YES = hand squeeze, once · NO = ..." so the relative never has to remember. */
 export function SignalReminder() {
   const { profile } = useApp();
-  const { lang } = useLang();
-  if (!profile) return null;
+  const { lang, tr } = useLang();
+  // Setup is optional; without it, suggest a signal the family can agree on now.
+  if (!profile) return <p class="signal-reminder">{tr(T.common.signalHint)}</p>;
   return (
     <p class="signal-reminder">
       {fill(T.common.signalReminder, lang, { yes: yesLabel(profile, lang), no: noLabel(profile, lang) })}

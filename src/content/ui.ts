@@ -23,6 +23,10 @@ export const T = {
     cancel: t('Huwag na', 'Cancel'),
     draft: t('Draft — susuriin pa ng nurse at speech pathologist.', 'Draft — pending review by a nurse and speech pathologist.'),
     signalReminder: t('OO = {yes} · HINDI = {no}', 'YES = {yes} · NO = {no}'),
+    signalHint: t(
+      'Tip: Magkasundo muna sa senyas. Hal.: "Pisilin mo ang kamay ko kung OO, dalawang beses kung HINDI."',
+      'Tip: Agree on a signal first. E.g.: "Squeeze my hand once for YES, twice for NO."',
+    ),
     privacy: t(
       'Lahat ng impormasyon ay nasa phone na ito lang. Walang ipinapadala kahit saan.',
       'Everything stays on this phone. Nothing is sent anywhere.',
@@ -60,11 +64,12 @@ export const T = {
       'Para maintindihan ang mahal mo sa ICU na hindi makapagsalita.',
       "Helps you understand your loved one in the ICU who can't speak.",
     ),
-    body: t(
-      'Tutulungan ka nitong hanapin kung paano siya makakasagot, at bibigyan siya ng paraan para masabi ang gusto niya.',
-      'This helps you find how they can answer, and gives them a way to say what they want.',
+    pick: t('Pumili ng paraan para makapag-usap kayo:', 'Pick a way to talk:'),
+    setup: t('I-set up ang OO/HINDI niya (opsyonal, mga 5 minuto)', 'Set up their yes/no (optional, about 5 minutes)'),
+    setupWhy: t(
+      'Tinutulungan ka nitong hanapin ang pinaka-maaasahang senyas niya at gumagawa ng card para sa nurse.',
+      'It helps you find their most reliable signal and makes a card for the nurse.',
     ),
-    start: t('Simulan', 'Start'),
   },
 
   home: {
